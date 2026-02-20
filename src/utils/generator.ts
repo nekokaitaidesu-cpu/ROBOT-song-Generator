@@ -127,7 +127,9 @@ Hot-blooded Super Robot Anime OP, Hard Rock, Brass Section, Power Vocals, Male C
       lyrics += `${tag}\n`;
     }
     for (const line of section.lines) {
-      if (line.trim()) {
+      if (line === '（スキップ）') {
+        lyrics += '\n';
+      } else if (line.trim()) {
         lyrics += `${line}\n`;
       }
     }
